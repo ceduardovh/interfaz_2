@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .top-bar {
+            width: 100%;
+            height: 50px;
+            background-color: #FFFF00;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            padding-left: 20px; /* Espacio a la izquierda para el logo */
+            padding-right: 20px; /* Espacio a la derecha para el ícono */
+            box-sizing: border-box; /* Incluye padding en el ancho total */
+            position: relative; /* Necesario para posicionar el ícono de manera absoluta */
+        }
+        .top-bar img.logo {
+            width: 157.82px;
+            height: 68.22px;
+        }
+        .top-bar img.icon {
+            position: absolute;
+            right: 20px;
+            top: 5px; 
+            height: 40px; 
+            width: auto;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #2C2C2C;
+            position: fixed;
+            top: 50px; /* Debajo de la barra amarilla */
+            left: 0;
+            height: calc(100% - 50px); /* Ajusta la altura para cubrir el área completa menos la barra superior */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Para asegurar que el perfil esté en la parte inferior */
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .sidebar .menu {
+            flex-grow: 1;
+        }
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 8px; /* Bordes redondeados */
+            transition: background-color 0.3s, color 0.3s; /* Transición suave */
+        }
+        .sidebar a:hover {
+            background-color: #6A1B9A; /* Color púrpura para el fondo en hover */
+            color: #FFFFFF; /* Color blanco para el texto en hover */
+        }
+        .sidebar a .material-icons {
+            margin-right: 15px; /* Espacio entre el ícono y el texto */
+            font-size: 24px;
+        }
+        .content {
+            margin-left: 270px; /* Espacio para la barra lateral */
+            padding-top: 60px; /* Espacio para la barra superior */
+            padding: 20px;
+        }
+        .profile-section {
+            background-color: #2C2C2C; /* Fondo oscuro para el perfil */
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            color: white;
+            border-top: 1px solid #444; /* Línea divisoria en la parte superior */
+        }
+        .profile-section .profile-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .profile-section .profile-info .material-icons {
+            font-size: 60px; /* Tamaño del ícono de perfil */
+            margin-bottom: 10px;
+        }
+        .profile-section .profile-info p {
+            margin: 3px 0;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .profile-section .profile-info .email {
+            font-size: 12px;
+            font-weight: normal;
+        }
+        .profile-section a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #FFFFFF; /* Color blanco para el texto del botón */
+            font-size: 14px;
+            text-decoration: none;
+            background-color: #6A1B9A; /* Color púrpura para el fondo del botón */
+            border: 1px solid #6A1B9A; /* Borde púrpura */
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s; /* Transición suave */
+        }
+        .profile-section a:hover {
+            background-color: #5C2D91; /* Color púrpura más oscuro para el fondo en hover */
+            color: #FFFFFF; /* Color blanco para el texto en hover */
+            border-color: #5C2D91; /* Color púrpura más oscuro para el borde en hover */
+        }
+    </style>
+    <!-- Enlace a los íconos de Google Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="top-bar">
+        <img src="logo2.png" alt="Logo" class="logo">
+    </div>
+
+    <div class="sidebar">
+        <div class="menu">
+            <a href="#"><span class="material-icons">assignment</span> Solicitudes</a>
+            <a href="#"><span class="material-icons">request_quote</span> Cotizaciones</a>
+            <a href="#"><span class="material-icons">track_changes</span> Seguimiento</a>
+            <a href="#"><span class="material-icons">help_outline</span> Consultas</a>
+        </div>
+
+  
+        <div class="profile-section">
+            <div class="profile-info">
+                <span class="material-icons">account_circle</span> 
+                <p>Nombre del Usuario</p>
+                <p class="email">usuario@ejemplo.com</p>
+                <p>Cargo: Administrador</p>
+            </div>
+            <a href="#">Salir</a>
+        </div>
+    </div>
+    
+    <div class="content">
+
+    </div>
+</body>
+</html>
